@@ -16,20 +16,18 @@ public class Bean02 {
     public Bean02() {
     }
 
-    public String btCalcularIMC(ActionEvent a) {
+    public void btCalcularIMC(ActionEvent a) throws Exception {
         calcularIMC();
-        return "teste";
     }
 
-    public String calcularIMC() {
+    public void calcularIMC() throws Exception  {
         if (getMassa() < 0) {
-            return "Massa abaixo de zero.";
+            throw new Exception("Massa abaixo de zero.");
         }
         if(getAltura() < 0 ) {
-            return "Altura invalida.";
+            throw new Exception("Altura invalida.");
         }
         setImc(getMassa() * (getAltura() * getAltura()));
-        return "";
     }
 
     public void calcularNivelIMC() {
