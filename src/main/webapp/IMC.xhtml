@@ -22,7 +22,7 @@
                 </h:panelGrid>
                     <h:panelGrid columns="1">
                     <p:outputLabel value="Calcular IMC"/>
-                   
+                    <p:inputText value="#{ct2.calcularIMC()}"/>
                     </h:panelGrid>
                 <h:panelGrid columns="3">
                     <p:commandButton action="#{ct2.btCalcularIMC(a)}" update="@form" value= "Calcular IMC"/>

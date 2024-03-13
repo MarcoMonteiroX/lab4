@@ -5,31 +5,17 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Salario</title>
     </h:head>
     <h:body>
         <h:form>
-        <p:panel header="Formulario 3 Numeros">
+        <p:panel header="Formulario de Calculo de Salario">
                 <h:panelGrid columns="2">
-                <p:outputLabel value="Numero 1"/>
-                <p:inputText value="#{ct.numero01}"/>
-                <p:outputLabel value="Numero 2"/>
-                <p:inputText value="#{ct.numero02}"/>
-                <p:outputLabel value="Numero 3"/>
-                <p:inputText value="#{ct.numero03}"/>
+                <p:outputLabel value="Insira o salario"/>
+                <p:inputText value="#{ct4.salario}"/>
                 </h:panelGrid>
-             <h:panelGrid columns="4">
-                 <p:outputLabel value="Maior Numero"/>
-                 <p:inputText value="#{ct.maiorNumero}"/>
-                 <h:panelGrid columns="4">
-                 <p:outputLabel value="Media"/>
-                 <p:inputText value="#{ct.maiorNumero}"/>
-                 <p:outputLabel value="Impar ou Par"/>
-                 <p:inputText value="#{ct.maiorNumero}"/>
-                 </h:panelGrid>
-                 </h:panelGrid>
                 <h:panelGrid columns="3">
-                    <p:commandButton action="#{ct.btVerificar(a)}" update="@form" value= "Verificar"/>
+                    <p:commandButton action="#{ct4.setSalario(salario)}" update="@form" value= "Calcular"/>
                 </h:panelGrid>
             </p:panel>
         </h:form>

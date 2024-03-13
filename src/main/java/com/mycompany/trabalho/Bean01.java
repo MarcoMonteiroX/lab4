@@ -21,12 +21,20 @@ public class Bean01 {
     public String btPagina01(ActionEvent a) {
         return "Page3Numeros";
     }
+    public String btPagina02(ActionEvent a) {
+        return "IMC";
+    }
+    public String btPagina03(ActionEvent a) {
+        return "investimento";
+    }
+    public String btPagina04(ActionEvent a) {
+        return "Salario";
+    }
     
-    public String btVerificar(ActionEvent a) {
+    public void btVerificar(ActionEvent a) {
         maior();
         media();
         soma();
-        return "O Maior número é: " + getMaiorNumero();
     }
 
     public void maior() {
