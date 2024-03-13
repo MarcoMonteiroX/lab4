@@ -8,10 +8,12 @@ import javax.faces.event.ActionEvent;
 @SessionScoped
 public class Bean01 {
 
-    Integer numero01;
-    Integer numero02;
-    Integer numero03;
+    private Integer numero01;
+    private Integer numero02;
+    private Integer numero03;
     private Integer maiorNumero;
+    private String media;
+    private String soma;
 
     public Bean01() {
     }
@@ -39,12 +41,12 @@ public class Bean01 {
         }
     }
 
-    public String media() {
-        return "A média dos três números é: " + (getNumero01() + getNumero02() + getNumero03()) / 3;
+    public void media() {
+        setMedia(((getNumero01() + getNumero02() + getNumero03()) / 3) + "");
     }
 
-    public String soma() {
-        return "A soma dos três numéros é " + parOuImpar();
+    public void soma() {
+        setSoma(parOuImpar());
     }
 
     public String parOuImpar() {
@@ -85,6 +87,22 @@ public class Bean01 {
 
     public void setMaiorNumero(Integer maiorNumero) {
         this.maiorNumero = maiorNumero;
+    }
+
+    public String getMedia() {
+        return media;
+    }
+
+    public void setMedia(String media) {
+        this.media = media;
+    }
+
+    public String getSoma() {
+        return soma;
+    }
+
+    public void setSoma(String soma) {
+        this.soma = soma;
     }
 
 }
