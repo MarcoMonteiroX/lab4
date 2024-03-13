@@ -7,22 +7,52 @@ import javax.faces.event.ActionEvent;
 @ManagedBean(name = "ct")
 @SessionScoped
 public class Bean01 {
-    
+
     Integer numero01;
     Integer numero02;
     Integer numero03;
     private Integer maiorNumero;
-    
+
     public Bean01() {
     }
     
-    public void btVerificar(ActionEvent a) {
-        
+    public String btPagina01(ActionEvent a) {
+        return "Page3Numeros";
     }
     
+    public String btVerificar(ActionEvent a) {
+        maior();
+        media();
+        soma();
+        return "O Maior número é: " + getMaiorNumero();
+    }
+
     public void maior() {
-        if(numero01 > numero02 && numero01 > numero03)
-            setma
+        if (numero01 > numero02 && numero01 > numero03) {
+            setMaiorNumero(getNumero01());
+        }
+        if (numero02 > numero01 && numero02 > numero03) {
+            setMaiorNumero(getNumero02());
+        }
+        if (numero03 > numero01 && numero03 > numero02) {
+            setMaiorNumero(getNumero03());
+        }
+    }
+
+    public String media() {
+        return "A média dos três números é: " + (getNumero01() + getNumero02() + getNumero03()) / 3;
+    }
+
+    public String soma() {
+        return "A soma dos três numéros é " + parOuImpar();
+    }
+
+    public String parOuImpar() {
+        if ((getNumero01() + getNumero02() + getNumero03()) % 2 == 0) {
+            return "Par";
+        } else {
+            return "Impar";
+        }
     }
 
     public Integer getNumero01() {
@@ -56,7 +86,5 @@ public class Bean01 {
     public void setMaiorNumero(Integer maiorNumero) {
         this.maiorNumero = maiorNumero;
     }
-    
-    
-    
+
 }
