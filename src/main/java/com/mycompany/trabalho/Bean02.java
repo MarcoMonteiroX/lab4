@@ -15,7 +15,9 @@ public class Bean02 {
 
     public Bean02() {
     }
-
+ public String btPagina02(ActionEvent a) {
+        return "IMC";
+    }
     public String btCalcularIMC(ActionEvent a) {
         calcularIMC();
         return "teste";

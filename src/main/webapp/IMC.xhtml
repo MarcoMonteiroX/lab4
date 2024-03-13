@@ -5,9 +5,30 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>IMC</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h:form>
+        <p:panel header="Formulario IMC">
+                <h:panelGrid columns="4">
+                <p:outputLabel value="Altura"/>
+                <p:inputText value="#{ct2.setAltura(altura)}"/>
+                <p:outputLabel value="IMC"/>
+                <p:inputText value="#{ct2.setImc(imc)}"/>
+                <p:outputLabel value="Massa"/>
+                <p:inputText value="#{ct2.setMassa(massa)}"/>
+                <p:outputLabel value="Nivel do IMC"/>
+                <p:inputText value="#{ct2.setNivelIMC(nivelIMC)}"/>
+                </h:panelGrid>
+                    <h:panelGrid columns="1">
+                    <p:outputLabel value="Calcular IMC"/>
+                   
+                    </h:panelGrid>
+                <h:panelGrid columns="3">
+                    <p:commandButton action="#{ct2.btCalcularIMC(a)}" update="@form" value= "Calcular IMC"/>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+
     </h:body>
 </html>

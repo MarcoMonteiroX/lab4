@@ -1,0 +1,16 @@
+
+body{
+    background-color: blueviolet;
+}
+.tittle{
+    font-weight: bold;
+    text-align:  center;
+    color: black;
+}
+.total{
+    width: 100%;
+}
+.caixa{
+    width: 400px;
+    margin: 0 auto;
+}
