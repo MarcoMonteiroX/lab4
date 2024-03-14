@@ -18,9 +18,7 @@ public class Bean02 {
 
     public void btCalcularIMC(ActionEvent a) throws Exception {
         calcularIMC();
-    }
-     public String btPagina02(ActionEvent a) {
-        return "IMC";
+        calcularNivelIMC();
     }
 
     public void calcularIMC() throws Exception  {
@@ -30,7 +28,7 @@ public class Bean02 {
         if(getAltura() < 0 ) {
             throw new Exception("Altura invalida.");
         }
-        setImc(getMassa() * (getAltura() * getAltura()));
+        setImc(getMassa() / (getAltura() * getAltura()));
     }
 
     public void calcularNivelIMC() {

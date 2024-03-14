@@ -17,9 +17,6 @@ public class Bean03 implements Serializable {
 
     public Bean03() {
     }
-     public String btPagina03(ActionEvent a) {
-        return "Investimentos";
-    }
 
     public void calcular() throws Exception {
         if (getAnos() < 0) {
@@ -33,6 +30,10 @@ public class Bean03 implements Serializable {
         }
         setResultado((investimentoInicial * taxaJurosAnual) * anos);
         setTotal(investimentoInicial + getResultado());
+    }
+    
+    public void btCalcularInvestimento(ActionEvent a) throws Exception {
+        calcular();
     }
 
     public Double getInvestimentoInicial() {

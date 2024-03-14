@@ -12,18 +12,14 @@
         <p:panel header="Formulario IMC">
                 <h:panelGrid columns="4">
                 <p:outputLabel value="Altura"/>
-                <p:inputText value="#{ct2.setAltura(altura)}"/>
-                <p:outputLabel value="IMC"/>
-                <p:inputText value="#{ct2.setImc(imc)}"/>
+                <p:inputText value="#{ct2.altura}"/>
                 <p:outputLabel value="Massa"/>
-                <p:inputText value="#{ct2.setMassa(massa)}"/>
+                <p:inputText value="#{ct2.massa}"/>
+                <p:outputLabel value="IMC"/>
+                <p:inputText value="#{ct2.imc}"/>
                 <p:outputLabel value="Nivel do IMC"/>
-                <p:inputText value="#{ct2.setNivelIMC(nivelIMC)}"/>
+                <p:inputText value="#{ct2.nivelIMC}"/>
                 </h:panelGrid>
-                    <h:panelGrid columns="1">
-                    <p:outputLabel value="Calcular IMC"/>
-                    <p:inputText value="#{ct2.calcularIMC()}"/>
-                    </h:panelGrid>
                 <h:panelGrid columns="3">
                     <p:commandButton action="#{ct2.btCalcularIMC(a)}" update="@form" value= "Calcular IMC"/>
                 </h:panelGrid>
