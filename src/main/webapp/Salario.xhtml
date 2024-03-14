@@ -13,9 +13,10 @@
                 <h:panelGrid columns="2">
                 <p:outputLabel value="Insira o salario"/>
                 <p:inputText value="#{ct4.salario}"/>
+                <p:outputLabel value="Novo salário: #{ct4.novoSalario}"/>
                 </h:panelGrid>
                 <h:panelGrid columns="3">
-                    <p:commandButton action="#{ct4.setSalario(salario)}" update="@form" value= "Calcular"/>
+                    <p:commandButton action="#{ct4.btNovoSalario(a)}" update="@form" value= "Calcular"/>
                 </h:panelGrid>
             </p:panel>
         </h:form>

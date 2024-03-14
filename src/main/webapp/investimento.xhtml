@@ -11,26 +11,20 @@
         <h:form>
         <p:panel header="Formulario 3 Numeros">
                 <h:panelGrid columns="2">
-                <p:outputLabel value="Numero 1"/>
-                <p:inputText value="#{ct.numero01}"/>
-                <p:outputLabel value="Numero 2"/>
-                <p:inputText value="#{ct.numero02}"/>
-                <p:outputLabel value="Numero 3"/>
-                <p:inputText value="#{ct.numero03}"/>
+                <p:outputLabel value="Valor do investimento"/>
+                <p:inputText value="#{ct3.investimentoInicial}"/>
+                <p:outputLabel value="Taxa de juros anual"/>
+                <p:inputText value="#{ct3.taxaJurosAnual}"/>
+                <p:outputLabel value="Periodo de tempo"/>
+                <p:inputText value="#{ct3.anos}"/>
                 </h:panelGrid>
-             <h:panelGrid columns="4">
-                 <p:outputLabel value="Maior Numero"/>
-                 <p:inputText value="#{ct.maiorNumero}"/>
-                 <h:panelGrid columns="4">
-                 <p:outputLabel value="Media"/>
-                 <p:inputText value="#{ct.maiorNumero}"/>
-                 <p:outputLabel value="Impar ou Par"/>
-                 <p:inputText value="#{ct.maiorNumero}"/>
+             <h:panelGrid columns="1">
+                 <p:outputLabel value="Valor investido em #{ct3.anos} anos: #{ct3.investimentoInicial}"/>
+                 <p:outputLabel value="Rendimento: #{ct3.resultado}"/>
+                 <p:outputLabel value="Total #{ct3.total}"/>
                  </h:panelGrid>
-                 </h:panelGrid>
-                <h:panelGrid columns="3">
-                    <p:commandButton action="#{ct.btVerificar(a)}" update="@form" value= "Verificar"/>
-                   
+                <h:panelGrid columns="1">
+                    <p:commandButton action="#{ct3.btCalcularInvestimento(a)}" update="@form" value= "Verificar"/>
                 </h:panelGrid>
             </p:panel>
         </h:form>
