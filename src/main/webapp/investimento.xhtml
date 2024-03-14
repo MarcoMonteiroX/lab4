@@ -23,8 +23,9 @@
                  <p:outputLabel value="Rendimento: #{ct3.resultado}"/>
                  <p:outputLabel value="Total #{ct3.total}"/>
                  </h:panelGrid>
-                <h:panelGrid columns="1">
-                    <p:commandButton action="#{ct3.btCalcularInvestimento(a)}" update="@form" value= "Verificar"/>
+                <h:panelGrid columns="2">
+                    <p:commandButton action="#{ct3.btCalcularInvestimento(a)}" update="@form" value= "Calcular"/>
+                    <p:link outcome="index" value="Voltar" style="margin-right: 20px"/>
                 </h:panelGrid>
             </p:panel>
         </h:form>

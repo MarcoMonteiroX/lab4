@@ -9,13 +9,14 @@
     </h:head>
     <h:body>
         <h:form>
-        <p:panel header="Formulario de Calculo de Salario">
+            <p:panel header="Formulario de Calculo de Salario">
                 <h:panelGrid columns="2">
-                <p:outputLabel value="Insira o salario"/>
-                <p:inputText value="#{ct4.salario}"/>
-                <p:outputLabel value="Novo salário: #{ct4.novoSalario}"/>
+                    <p:outputLabel value="Insira o salario"/>
+                    <p:inputText value="#{ct4.salario}"/>
+                    <p:outputLabel value="Novo salário: #{ct4.novoSalario}"/>
                 </h:panelGrid>
                 <h:panelGrid columns="3">
+                    <p:link outcome="index" value="Voltar" style="margin-right: 20px"/>
                     <p:commandButton action="#{ct4.btNovoSalario(a)}" update="@form" value= "Calcular"/>
                 </h:panelGrid>
             </p:panel>
